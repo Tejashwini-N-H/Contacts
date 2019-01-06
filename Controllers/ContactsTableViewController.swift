@@ -44,12 +44,20 @@ class ContactsTableViewController: UITableViewController {
     }
     // unwind segue
     @IBAction func unwindToContact(segue: UIStoryboardSegue) {
-        guard let viewController = segue.source as? CreateContactViewController else {return}
-        guard let name = viewController.firstNameTextField.text else { return }
-        guard let number = viewController.mobileTextField.text  else {return }
-        let contact = Contact(name : name, contactNumber: number)
-        contacts.append(contact)
-        tableView.reloadData()
+        if let viewController = segue.source as? CreateContactViewController {
+            guard let name = viewController.firstNameTextField.text else { return }
+            guard let number = viewController.mobileTextField.text  else {return }
+            let contact = Contact(name : name, contactNumber: number)
+            contacts.append(contact)
+            tableView.reloadData()
+        } else if  let viewController = segue.source as? ContactsDetailViewController {
+            if viewController.isDeleted {
+                guard let indexPath : IndexPath = viewController.indexPath else {return}
+                contacts.remove(at: indexPath.row)
+                tableView.reloadData()
+            }
+        }
+      
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "contactDetailSegue" {
@@ -58,7 +66,7 @@ class ContactsTableViewController: UITableViewController {
             
             let contact = contacts[indexPath.row]
             viewController.contact = contact
-            
+            viewController.indexPath = indexPath
         
         }
     }

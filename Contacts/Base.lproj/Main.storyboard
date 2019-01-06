@@ -167,13 +167,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  Tejashwini" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFu-66-oVY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Tejashwini" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFu-66-oVY">
                                 <rect key="frame" x="0.0" y="94" width="375" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ContactNumber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfw-cN-IpX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ContactNumber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfw-cN-IpX">
                                 <rect key="frame" x="16" y="156" width="153" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="bFh-Jq-vJ4"/>
@@ -182,22 +182,36 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="154948997418" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcS-7o-qKV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="154948997418" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcS-7o-qKV">
                                 <rect key="frame" x="215" y="156" width="144" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oY7-Qc-CDW">
+                                <rect key="frame" x="122" y="611" width="131" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Delete Contact">
+                                    <color key="titleColor" red="0.9991036057472229" green="0.14734247326850891" blue="0.021209469065070152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteContact:" destination="aOh-cm-9u5" eventType="touchUpInside" id="8Nh-IQ-gMx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CFu-66-oVY" firstAttribute="top" secondItem="5by-b0-L9Y" secondAttribute="top" constant="30" id="ADf-ln-A3Y"/>
                             <constraint firstItem="mfw-cN-IpX" firstAttribute="top" secondItem="KcS-7o-qKV" secondAttribute="top" id="Gw6-Nz-ur0"/>
+                            <constraint firstItem="5by-b0-L9Y" firstAttribute="bottom" secondItem="mfw-cN-IpX" secondAttribute="bottom" constant="487" id="H5u-pZ-VFG"/>
                             <constraint firstItem="CFu-66-oVY" firstAttribute="leading" secondItem="5by-b0-L9Y" secondAttribute="leading" id="LJL-es-Zk7"/>
+                            <constraint firstItem="5by-b0-L9Y" firstAttribute="bottom" secondItem="oY7-Qc-CDW" secondAttribute="bottom" constant="20" id="YAI-YR-K0d"/>
                             <constraint firstItem="mfw-cN-IpX" firstAttribute="leading" secondItem="5by-b0-L9Y" secondAttribute="leading" constant="16" id="fQQ-e5-9rs"/>
+                            <constraint firstItem="mfw-cN-IpX" firstAttribute="top" secondItem="CFu-66-oVY" secondAttribute="bottom" constant="28" id="lSU-iD-oxn"/>
                             <constraint firstItem="5by-b0-L9Y" firstAttribute="trailing" secondItem="KcS-7o-qKV" secondAttribute="trailing" constant="16" id="uGV-N9-e8Z"/>
                             <constraint firstItem="CFu-66-oVY" firstAttribute="trailing" secondItem="5by-b0-L9Y" secondAttribute="trailing" id="upq-Xd-aZC"/>
                             <constraint firstItem="KcS-7o-qKV" firstAttribute="leading" secondItem="mfw-cN-IpX" secondAttribute="trailing" constant="46" id="usk-sy-2oB"/>
+                            <constraint firstItem="oY7-Qc-CDW" firstAttribute="centerX" secondItem="miO-PG-vKu" secondAttribute="centerX" id="y2U-jg-oxj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5by-b0-L9Y"/>
                     </view>

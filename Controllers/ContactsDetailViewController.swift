@@ -10,6 +10,8 @@ import UIKit
 
 class ContactsDetailViewController: UIViewController {
    var contact : Contact? = nil
+    var isDeleted : Bool = false
+    var indexPath : IndexPath? = nil
     
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -31,4 +33,10 @@ class ContactsDetailViewController: UIViewController {
     @IBAction func done(_ sender: Any) {
         performSegue(withIdentifier: "unwindToContact", sender: self)
     }
+    
+    @IBAction func deleteContact(_ sender: UIButton) {
+        isDeleted = true
+        performSegue(withIdentifier: "unwindToContact", sender: self)
+    }
+    
 }
