@@ -133,13 +133,14 @@
                         <outlet property="firstNameTextField" destination="YcW-PL-Y5b" id="uc9-LP-4Tk"/>
                         <outlet property="mobileTextField" destination="way-G0-RzP" id="2oa-MM-t34"/>
                         <outlet property="surnameTextField" destination="A8g-xW-ghb" id="QaQ-Zz-r9j"/>
+                        <outlet property="titletext" destination="wRb-rY-6DW" id="Cal-c7-R71"/>
                         <segue destination="MtH-ZH-5CX" kind="unwind" identifier="unwindToContact" unwindAction="unwindToContactWithSegue:" id="k2O-5V-aK2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qs8-5b-QaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="MtH-ZH-5CX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2129" y="-490"/>
+            <point key="canvasLocation" x="3702" y="-559"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gOM-7F-SB3">
@@ -159,7 +160,7 @@
             </objects>
             <point key="canvasLocation" x="1280.8" y="-82.3088455772114"/>
         </scene>
-        <!--Contacts Detail View Controller-->
+        <!--Contact-->
         <scene sceneID="19g-na-Zio">
             <objects>
                 <viewController id="aOh-cm-9u5" customClass="ContactsDetailViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
@@ -167,23 +168,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Tejashwini" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFu-66-oVY">
-                                <rect key="frame" x="0.0" y="94" width="375" height="34"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ContactNumber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfw-cN-IpX">
-                                <rect key="frame" x="16" y="156" width="153" height="24"/>
+                                <rect key="frame" x="9" y="156" width="153" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="bFh-Jq-vJ4"/>
+                                    <constraint firstAttribute="height" constant="24" id="fhE-7u-d2g"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="154948997418" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcS-7o-qKV">
-                                <rect key="frame" x="215" y="156" width="144" height="23"/>
+                                <rect key="frame" x="229" y="156" width="131" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -195,30 +190,40 @@
                                     <color key="titleColor" red="0.9991036057472229" green="0.14734247326850891" blue="0.021209469065070152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="deleteContact:" destination="aOh-cm-9u5" eventType="touchUpInside" id="8Nh-IQ-gMx"/>
+                                    <action selector="deleteContact:" destination="aOh-cm-9u5" eventType="touchUpInside" id="etl-yx-xTf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Tejashwini" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFu-66-oVY">
+                                <rect key="frame" x="0.0" y="104" width="128" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="CFu-66-oVY" firstAttribute="top" secondItem="5by-b0-L9Y" secondAttribute="top" constant="30" id="ADf-ln-A3Y"/>
-                            <constraint firstItem="mfw-cN-IpX" firstAttribute="top" secondItem="KcS-7o-qKV" secondAttribute="top" id="Gw6-Nz-ur0"/>
-                            <constraint firstItem="5by-b0-L9Y" firstAttribute="bottom" secondItem="mfw-cN-IpX" secondAttribute="bottom" constant="487" id="H5u-pZ-VFG"/>
-                            <constraint firstItem="CFu-66-oVY" firstAttribute="leading" secondItem="5by-b0-L9Y" secondAttribute="leading" id="LJL-es-Zk7"/>
+                            <constraint firstAttribute="trailing" secondItem="KcS-7o-qKV" secondAttribute="trailing" constant="15" id="5IS-gj-XiL"/>
+                            <constraint firstItem="KcS-7o-qKV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mfw-cN-IpX" secondAttribute="trailing" constant="8" symbolic="YES" id="8Ab-FN-GWe"/>
+                            <constraint firstItem="CFu-66-oVY" firstAttribute="leading" secondItem="5by-b0-L9Y" secondAttribute="leading" id="BZv-YE-ZfZ"/>
+                            <constraint firstItem="mfw-cN-IpX" firstAttribute="top" secondItem="KcS-7o-qKV" secondAttribute="top" id="NPU-ke-PYx"/>
                             <constraint firstItem="5by-b0-L9Y" firstAttribute="bottom" secondItem="oY7-Qc-CDW" secondAttribute="bottom" constant="20" id="YAI-YR-K0d"/>
-                            <constraint firstItem="mfw-cN-IpX" firstAttribute="leading" secondItem="5by-b0-L9Y" secondAttribute="leading" constant="16" id="fQQ-e5-9rs"/>
-                            <constraint firstItem="mfw-cN-IpX" firstAttribute="top" secondItem="CFu-66-oVY" secondAttribute="bottom" constant="28" id="lSU-iD-oxn"/>
-                            <constraint firstItem="5by-b0-L9Y" firstAttribute="trailing" secondItem="KcS-7o-qKV" secondAttribute="trailing" constant="16" id="uGV-N9-e8Z"/>
-                            <constraint firstItem="CFu-66-oVY" firstAttribute="trailing" secondItem="5by-b0-L9Y" secondAttribute="trailing" id="upq-Xd-aZC"/>
-                            <constraint firstItem="KcS-7o-qKV" firstAttribute="leading" secondItem="mfw-cN-IpX" secondAttribute="trailing" constant="46" id="usk-sy-2oB"/>
+                            <constraint firstItem="mfw-cN-IpX" firstAttribute="top" secondItem="CFu-66-oVY" secondAttribute="bottom" constant="25" id="fgX-fX-qZM"/>
+                            <constraint firstItem="5by-b0-L9Y" firstAttribute="trailing" secondItem="CFu-66-oVY" secondAttribute="trailing" constant="247.5" id="pm2-Zh-iIH"/>
+                            <constraint firstItem="mfw-cN-IpX" firstAttribute="leading" secondItem="5by-b0-L9Y" secondAttribute="leading" constant="9" id="x6w-tC-iKl"/>
                             <constraint firstItem="oY7-Qc-CDW" firstAttribute="centerX" secondItem="miO-PG-vKu" secondAttribute="centerX" id="y2U-jg-oxj"/>
+                            <constraint firstItem="CFu-66-oVY" firstAttribute="top" secondItem="5by-b0-L9Y" secondAttribute="top" constant="40" id="yBL-eM-YDP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5by-b0-L9Y"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Cxt-X0-H1g">
+                    <navigationItem key="navigationItem" title="Contact" id="Cxt-X0-H1g">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="iFb-f4-55a">
                             <connections>
                                 <action selector="done:" destination="aOh-cm-9u5" id="nf1-mt-YZn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="ru4-3l-R9v">
+                            <connections>
+                                <segue destination="IL9-0X-PjQ" kind="presentation" identifier="editContact" id="UM5-OH-Qam"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -270,4 +275,7 @@
             <point key="canvasLocation" x="2128" y="225.78710644677662"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kfg-Bk-I3S"/>
+    </inferredMetricsTieBreakers>
 </document>

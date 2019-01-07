@@ -62,6 +62,7 @@ class ContactsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "contactDetailSegue" {
       guard  let viewController = segue.destination as? ContactsDetailViewController else { return }
+            
             guard     let indexPath = tableView.indexPathForSelectedRow else {return}
             
             let contact = contacts[indexPath.row]

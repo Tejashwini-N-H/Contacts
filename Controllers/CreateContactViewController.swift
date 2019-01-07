@@ -9,7 +9,9 @@
 import UIKit
 
 class CreateContactViewController: UIViewController {
-
+   var titletextlabel = "Create Contact"
+    @IBOutlet weak var titletext: UINavigationItem!
+    
     @IBOutlet weak var firstNameTextField: UITextField!
     
     @IBOutlet weak var surnameTextField: UITextField!
@@ -18,9 +20,15 @@ class CreateContactViewController: UIViewController {
     
     @IBOutlet weak var mobileTextField: UITextField!
     
+    var contact : Contact? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    titletext.title = titletextlabel
+        if let contact = contact {
+            firstNameTextField.text = contact.name
+            mobileTextField.text = contact.contactNumber
+        }
         // Do any additional setup after loading the view.
     }
    

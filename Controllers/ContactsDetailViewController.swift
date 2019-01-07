@@ -39,4 +39,17 @@ class ContactsDetailViewController: UIViewController {
         performSegue(withIdentifier: "unwindToContact", sender: self)
     }
     
+    //navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editContact"{
+            guard let viewController = segue.destination as? CreateContactViewController else {return}
+            
+            //viewController.titletext = "Edit Contact"
+            navigationItem.title = "Edit Contact"
+            viewController.contact = contact
+        }
+    }
+    
+    
+    
 }
